@@ -2,12 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Header({ text }) {
+    const headerStyle = {
+        backgroundColor: 'blue',
+        color: 'red'
+    }
   return (
-    <div>
+    <header style={headerStyle}>
       <div className="container">
         <h2>{text}</h2>
       </div>
-    </div>
+    </header>
   );
 }
 Header.defaultProps = {
