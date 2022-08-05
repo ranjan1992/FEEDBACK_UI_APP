@@ -1,5 +1,12 @@
 function App() {
-  return <h1>Hello from the app component</h1>;
+  return (
+    <div className="container">
+      <h1>My App</h1>
+    </div>
+    /**
+     * return React.createElement('div', {className: "container"}, React.createElement("h1", {}, 'My App'))
+     */
+  );
 }
 
-export default App
+export default App;
