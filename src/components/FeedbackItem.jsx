@@ -4,11 +4,11 @@ import FeedbackContext from '../context/FeedbackContext';
 import { useContext } from 'react';
 
 function FeedbackItem({ item }) {
-  const { handleDelete } = useContext(FeedbackContext);
+  const { handleDelete, editFeedback } = useContext(FeedbackContext);
   return (
     <Card>
       <div className="num-display">{item.rating}</div>
-      <button className="edit">
+      <button onClick={() => editFeedback(item)} className="edit">
         <FaEdit color="purple" />
       </button>
       <button onClick={() => handleDelete(item.id)} className="close">
