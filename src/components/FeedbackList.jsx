@@ -2,7 +2,7 @@ import React from 'react';
 import FeedbackItem from './FeedbackItem';
 
 function FeedbackList({ feedback, onDelete }) {
-  if (!feedback || feedback.length == 0) {
+  if (!feedback || feedback.length === 0) {
     return <p>No Feedback Yet !!!</p>;
   }
 
