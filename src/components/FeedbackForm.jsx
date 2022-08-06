@@ -9,18 +9,18 @@ function FeedbackForm({ handleAdd }) {
   const [btnDisabled, setBtnDisabled] = useState(true);
   const [message, setMessage] = useState('');
 
-  const handleTextChange = (e) => {
-    if (text === '') {
+  const handleTextChange = ({ target: { value } }) => {
+    if (value === '') {
       setBtnDisabled(true);
       setMessage(null);
-    } else if (text !== '' && text.trim().length <= 10) {
+    } else if (value !== '' && value.trim().length <= 10) {
       setMessage('Please enter more than 10 characters !');
       setBtnDisabled(true);
     } else {
-      setMessage(null);
       setBtnDisabled(false);
+      setMessage(null);
     }
-    setText(e.target.value);
+    setText(value);
   };
 
   const handleSubmit = (e) => {
@@ -32,6 +32,9 @@ function FeedbackForm({ handleAdd }) {
       };
       handleAdd(newFeedback);
     }
+    setBtnDisabled(true);
+    setRating(10);
+    setText('');
   };
   return (
     <Card>
