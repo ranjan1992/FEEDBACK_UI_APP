@@ -7,6 +7,7 @@ import Feedbackdata from './data/feedbackdata';
 import { v4 as uuidv4 } from 'uuid';
 import Home from './pages/Home';
 import About from './pages/About';
+import { FeedbackProvider } from './context/FeedbackContext';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
     console.log(feedback);
   };
   return (
-    <>
+    <FeedbackProvider>
       <Router>
         <Header />
         <div className="container">
@@ -33,8 +34,8 @@ function App() {
               element={
                 <>
                   <FeedbackForm handleAdd={addFeedback} />
-                  <FeedbackStats feedback={feedback} />
-                  <FeedbackList feedback={feedback} onDelete={handleDelete} />
+                  <FeedbackStats />
+                  <FeedbackList onDelete={handleDelete} />
                 </>
               }
             />
@@ -43,7 +44,7 @@ function App() {
           </Routes>
         </div>
       </Router>
-    </>
+    </FeedbackProvider>
   );
 }
 
