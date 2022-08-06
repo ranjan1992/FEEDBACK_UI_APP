@@ -2,7 +2,7 @@
   "feedback": [
     {
       "id": 1,
-      "rating": 10,
+      "rating": 1,
       "text": "This is feedback item 1 coming from the backend"
     },
     {
@@ -14,6 +14,31 @@
       "id": 3,
       "rating": 4,
       "text": "This is feedback item 3 coming from the backend"
+    },
+    {
+      "text": "This is my new Notes",
+      "rating": 2,
+      "id": 4
+    },
+    {
+      "text": "How are you Ranjan",
+      "rating": 2,
+      "id": 5
+    },
+    {
+      "text": "are you there now also",
+      "rating": 3,
+      "id": 6
+    },
+    {
+      "text": "Why are you disbehaving",
+      "rating": 3,
+      "id": 7
+    },
+    {
+      "text": "Please love me the most as possible",
+      "rating": 10,
+      "id": 8
     }
   ]
 }
